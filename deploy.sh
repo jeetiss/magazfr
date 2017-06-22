@@ -10,7 +10,7 @@ git init
 git config user.name "jeetiss"
 git config user.email "za5rubley@gmail.com"
 
-git remote add upstream "https://$GH_TOKEN@github.com/jeetiss/madskillz.git"
+git remote add upstream "https://$GH_TOKEN@github.com/jeetiss/magazfr.git"
 git fetch upstream
 git reset upstream/gh-pages
 
