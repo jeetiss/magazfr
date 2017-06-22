@@ -57,12 +57,20 @@ const Button = (name, path, text, activePage, loadedPages, dispatch) => (
   </HeaderButton>
 )
 
+const Logo = styled.div`
+  line-height: 34px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+`
+
 const Header = connect(state => ({
   activePage: state.activePage,
   loadedPages: state.pages,
   bucket: state.bucket
 }))(({ activePage, dispatch, loadedPages, bucket }) => (
   <HeaderContainer>
+    <Logo>Element.security</Logo>
     <HeaderButton
       active={activePage === 'main'}
       onClick={() => dispatch({ type: 'switch_page', page: 'main' })}
@@ -173,14 +181,13 @@ const BucketBody = styled.div`
 
 const Img = styled.div`
   width: 100%;
-  height: 200px;
+  height: 450px;
   overflow: hidden;
   color: #fff;
   font-size: 20px;
   padding: 20px;
-  background-image: url('http://moysignal.ru/wp-content/uploads/2014/08/original.jpg');
+  background-image: url('https://pp.userapi.com/c841623/v841623713/1e7b/v1rwMgeP1UE.jpg');
   background-size: cover;
-  background-position: 0px -145px;
 `
 
 const Cart = styled.div`
@@ -194,7 +201,7 @@ const MainPage = connect(state => ({
   ({ activePage, dispatch }) =>
     activePage === 'main' &&
     <div>
-      <Img alt='камера'>Element.security</Img>
+      <Img alt='камера'></Img>
       <Cart>
         <div>О НАС</div>
         <div>
